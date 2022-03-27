@@ -1,0 +1,360 @@
+header {
+  background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+  border-radius: 0px 0px 0px 100px;
+  color: white;
+}
+
+header .background {
+  background-image: url(../../images/bg-pattern-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 170%;
+  background-position: -98px -886px;
+  padding-left: 11.5%;
+  padding-right: 11.5%;
+  padding-top: 72px;
+  height: 600px;
+}
+
+header a, header a:visited, header a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+header .prensentation {
+  text-align: center;
+}
+
+header .prensentation h2 {
+  font-size: 64px;
+  line-height: 98px;
+  font-weight: 600;
+  font-family: 'Overpass', sans-serif;
+}
+
+@media (max-width: 43.125em) {
+  header .prensentation h2 {
+    font-size: 36px;
+    line-height: 55px;
+  }
+}
+
+header .prensentation p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: 'Overpass', sans-serif;
+}
+
+.DesktopNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 130px;
+}
+
+.DesktopNav .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.DesktopNav .left .logo {
+  width: 101px;
+  height: 40px;
+  margin-right: 64px;
+}
+
+.DesktopNav .left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  list-style: none;
+}
+
+.DesktopNav .left ul li {
+  position: relative;
+  margin-right: 32px;
+}
+
+.DesktopNav .left ul li button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.DesktopNav .left ul li button:hover {
+  cursor: pointer;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.DesktopNav .left ul li button img {
+  margin-left: 8px;
+}
+
+.DesktopNav .left ul li button.open {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.DesktopNav .left ul li button.open img {
+  rotate: 180deg;
+}
+
+.DesktopNav .left ul li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  display: none;
+}
+
+.DesktopNav .left ul li ul.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateY(50px) translateX(-20%);
+          transform: translateY(50px) translateX(-20%);
+  padding: 24px;
+  -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+  border-radius: 5px;
+}
+
+.DesktopNav .left ul li li a {
+  color: black;
+  font-size: 15px;
+  line-height: 33px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.DesktopNav .left ul li li a:hover {
+  font-weight: 700;
+}
+
+.DesktopNav .right a {
+  width: 137px;
+  height: 48px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 28px;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.8;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.DesktopNav .right a:nth-child(2) {
+  background-color: white;
+  color: #FF3E55;
+  margin-left: 20px;
+}
+
+.DesktopNav .right a:hover {
+  opacity: 1;
+  background: #FF7B86;
+  color: white;
+}
+
+.MobileNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-bottom: 108px;
+}
+
+.MobileNav .HamburgerBtn span {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: white;
+  -webkit-transform-origin: 2px 2px;
+          transform-origin: 2px 2px;
+}
+
+.MobileNav .HamburgerBtn span:nth-child(2) {
+  margin-top: 6px;
+}
+
+.MobileNav .HamburgerBtn span:nth-child(3) {
+  margin-top: 6px;
+}
+
+.MobileNav .HamburgerBtn:hover {
+  cursor: pointer;
+}
+
+.MobileNav .HamburgerBtn.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.MobileNav .HamburgerBtn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.MobileNav .HamburgerBtn.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.MobileNav .HamburgerMenu {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  color: black;
+  bottom: 0;
+  -webkit-transform: translateY(calc(100% + 37px));
+          transform: translateY(calc(100% + 37px));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.MobileNav .HamburgerMenu details {
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.MobileNav .HamburgerMenu details summary {
+  list-style: none;
+  position: relative;
+}
+
+.MobileNav .HamburgerMenu details summary img {
+  margin-left: 10px;
+}
+
+.MobileNav .HamburgerMenu details summary:hover {
+  cursor: pointer;
+}
+
+.MobileNav .HamburgerMenu details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  margin: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  background-color: rgba(45, 46, 64, 0.08);
+}
+
+.MobileNav .HamburgerMenu details div a {
+  color: black;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.MobileNav .HamburgerMenu details[open] {
+  margin-bottom: 0px;
+}
+
+.MobileNav .HamburgerMenu details[open] img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.MobileNav .HamburgerMenu a {
+  font-size: 18px;
+  line-height: 28px;
+  color: black;
+  text-align: center;
+}
+
+.MobileNav .HamburgerMenu .login {
+  border-top: solid 1px #E8E4E4;
+  padding: 24px;
+  width: 100%;
+}
+
+.MobileNav .HamburgerMenu .signup {
+  color: white;
+  background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  height: 48px;
+  width: 137px;
+  border-radius: 24px;
+  padding: 10px;
+}
+
+.MobileNav .HamburgerMenu.open {
+  visibility: visible;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Overpass', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media (max-width: 65.5625rem) {
+  .hideForMobile {
+    display: none;
+  }
+}
+
+@media (min-width: 65.625rem) {
+  .hideForDesktop {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,274 @@
+header{
+    
+    background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+    border-radius: 0px 0px 0px 100px;
+    color: $WhiteText;
+    .background{
+        background-image: url(../../images/bg-pattern-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 170%;
+        background-position: -98px -886px;
+        padding-left: 11.5%;
+        padding-right: 11.5%;
+        padding-top: 72px;
+        height: 600px;
+    }
+    a, a:visited, a:hover{
+        text-decoration: none;
+        color: $WhiteText;
+    }
+
+    .prensentation{
+        text-align: center;
+        h2{
+           font-size: 64px;
+           line-height: 98px;
+           font-weight: 600;
+           font-family: 'Overpass', sans-serif;
+           @include breakpoint-down(small){
+            font-size: 36px;
+            line-height: 55px;
+           }
+        }
+        p{
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+            font-family: 'Overpass', sans-serif;
+        }
+        .buttons{
+            a{
+
+            }
+        }
+    }
+
+
+}
+.DesktopNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 130px;
+    .left{
+        display: flex;
+        .logo{
+            width: 101px;
+            height: 40px;
+            margin-right: 64px;
+        }
+        ul{
+            display: flex;
+            font-family: 'Ubuntu', sans-serif;
+            list-style: none;
+            li{
+                position: relative;
+                margin-right: 32px;
+                button{
+                    background: transparent;
+                    border: none;
+                    color: $WhiteText;
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                    
+                    opacity: 0.8;
+
+                    &:hover{
+                        cursor: pointer;
+                        opacity: 1;
+                        text-decoration: underline;
+                    }
+
+                    img{
+                        margin-left: 8px;
+                    }
+                }
+                button.open{
+                    opacity: 1;
+                    text-decoration: underline;
+                    img{
+                        rotate: 180deg;
+                    }
+                }
+                
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $WhiteText;
+                    display: none;
+                }
+                ul.open{
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateY(50px) translateX(-20%);
+                    padding: 24px;
+                    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+                    border-radius: 5px;
+                }
+                li{
+                    a{
+                        color: black;
+                        font-size: 15px;
+                        line-height: 33px;
+                        font-family: 'Ubuntu';
+                        font-style: normal;
+                        font-weight: 400;
+                        &:hover{
+                            font-weight: 700;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        a{
+            &:nth-child(2){
+                background-color: $WhiteText;
+                color: #FF3E55;
+                margin-left: 20px;
+            }
+            width: 137px;
+            height: 48px;
+            text-align: center;
+            display: inline-block;
+            
+            border-radius: 28px;
+            padding: 15px;
+            color: $WhiteText;
+            font-size: 16px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: all 200ms ease-in-out;
+            &:hover{
+                opacity: 1;
+                background: #FF7B86;
+                color: $WhiteText;
+            }
+        }
+    }
+}
+
+.MobileNav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 108px;
+    h1{
+
+    }
+    .HamburgerBtn{
+        span{
+            content: "";
+            display: block;
+            width: 32px;
+            height: 4px;
+            background-color: $WhiteText;
+            transform-origin: 2px 2px;
+            &:nth-child(2){
+                margin-top: 6px;
+            }
+            &:nth-child(3){
+                margin-top: 6px;
+            }
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .HamburgerBtn.open{
+        span{
+            &:nth-child(1){
+                transform: rotate(45deg);
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+             transform: rotate(-45deg);
+            }
+        }
+    }
+    .HamburgerMenu{
+        position: absolute;
+        width: 100%;
+        background-color: $WhiteText;
+        color: black;
+        bottom: 0;
+        transform: translateY(calc(100% + 37px));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+        border-radius: 5px;
+        visibility: hidden;
+        details{
+            margin-bottom: 24px;
+            width: 100%;
+            text-align: center;
+            summary{
+                list-style: none;
+                position: relative;
+                img{
+                    margin-left: 10px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            div{
+                display: flex;
+                padding: 20px;
+                margin: 24px;
+                flex-direction: column;
+                border-radius: 5px;
+                background-color: rgba(45, 46, 64, 0.08);
+                a{
+                    color: black;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+            
+        }
+        details[open]{
+            margin-bottom: 0px;
+            img{
+                transform: rotate(180deg);
+            }
+        }
+        
+        a{
+            font-size: 18px;
+            line-height: 28px;
+            color: black;
+            
+            text-align: center;
+        }
+        .login{
+            border-top: solid 1px #E8E4E4;
+            padding: 24px;
+            width: 100%;
+        }
+        .signup{
+            color: $WhiteText;
+            background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Ubuntu', sans-serif;
+            height: 48px;
+            width: 137px;
+            border-radius: 24px;
+            padding: 10px
+        }
+    }
+    .HamburgerMenu.open{
+        visibility: visible;
+    }
+
+}
