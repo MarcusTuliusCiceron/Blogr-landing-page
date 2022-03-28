@@ -1,0 +1,44 @@
+.center_section{
+    height: 28vw;
+    background: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
+    border-radius: 0px 100px;
+    color: $WhiteText;
+    font-family: 'Overpass', sans-serif;
+    margin-bottom: 116px;
+    
+    &_box{
+        background-image: url(../../images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
+
+        .img{
+            width: 32.8vw;
+            height: 34.65vw;
+            background-image: url(../../images/illustration-phones-cropped.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-left: 11.46vw;
+            margin-right: 6.8vw;
+        }
+        .text{
+            width: 37.5vw;
+            h2{
+                
+                font-size: 40px;
+                line-height: 50px;
+                letter-spacing: -1.2px;
+            }
+            p{
+                font-size: 16px;
+                min-height: 28px;
+            }
+        }
+    }
+
+}

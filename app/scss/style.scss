@@ -1,6 +1,8 @@
 @import "variables";
 @import "mixin";
 @import "header";
+@import "_top_section";
+@import "center_section";
 
 html{
     box-sizing: border-box;

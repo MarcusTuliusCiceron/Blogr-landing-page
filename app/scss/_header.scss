@@ -18,7 +18,6 @@ header{
         text-decoration: none;
         color: $WhiteText;
     }
-
     .prensentation{
         text-align: center;
         h2{
@@ -37,14 +36,7 @@ header{
             font-weight: 400;
             font-family: 'Overpass', sans-serif;
         }
-        .buttons{
-            a{
-
-            }
-        }
     }
-
-
 }
 .DesktopNav{
     display: flex;
@@ -159,9 +151,6 @@ header{
     justify-content: space-between;
     position: relative;
     margin-bottom: 108px;
-    h1{
-
-    }
     .HamburgerBtn{
         span{
             content: "";
