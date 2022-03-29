@@ -5,6 +5,10 @@
     color: $WhiteText;
     font-family: 'Overpass', sans-serif;
     margin-bottom: 116px;
+    @include breakpoint-down(medium){
+        height: 625px;
+        padding: 0 11.4vw
+    }
     
     &_box{
         background-image: url(../../images/bg-pattern-circles.svg);
@@ -14,6 +18,11 @@
         height: 100%;
         display: flex;
         align-items: center;
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            background-size: 100%;
+            background-position: top -50% left 50%;
+        }
         
 
         .img{
@@ -25,14 +34,29 @@
             background-size: contain;
             margin-left: 11.46vw;
             margin-right: 6.8vw;
+            @include breakpoint-down(medium){
+                min-width: 328px;
+                min-height: 347px;
+                margin: 0;
+                margin-bottom: 46.7px;
+                transform: translateY(-170px);
+            }
         }
         .text{
             width: 37.5vw;
+            @include breakpoint-down(medium){
+                width: 100%;
+                text-align: center;
+                transform: translateY(-170px);
+            }
             h2{
                 
                 font-size: 40px;
                 line-height: 50px;
                 letter-spacing: -1.2px;
+                @include breakpoint-down(medium){
+                    margin-bottom: 30px;
+                }
             }
             p{
                 font-size: 16px;
